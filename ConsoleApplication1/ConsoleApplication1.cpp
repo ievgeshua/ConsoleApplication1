@@ -1,15 +1,36 @@
 ﻿// ConsoleApplication1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
+
 #include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
-    std::cout << "Buy World and elefant!\n";
-    std::cout << "Hell\n";
-    std::cout << "Buy World and elefant!\n";
-}
+    using namespace std;
+
+    void drawCube(int size) {
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j < size; ++j) {
+                if (i == 0 || i == size - 1 || j == 0 || j == size - 1) {
+                    cout << "* ";
+                }
+                else {
+                    cout << "  ";
+                }
+            }
+            cout << endl;
+        }
+    }
+
+    int main() {
+        int size;
+
+        cout << "Enter the size of the cube: ";
+        cin >> size;
+
+        drawCube(size);
+
+        return 0;
+    }
+
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
